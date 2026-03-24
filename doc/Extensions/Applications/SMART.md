@@ -39,13 +39,13 @@ chmod +x /etc/snmp/smart
    result in errors.
 
 ```bash
- */5 * * * * /etc/snmp/smart -u -Z
+ */5 * * * * /etc/snmp/smart -u
 ```
 
 5. Edit your snmpd.conf file and add:
 
 ```bash
-extend smart /bin/cat /var/cache/smart
+extend smart /bin/cat /var/cache/smart.snmp
 ```
 
 6. You will also need to create the config file, which defaults to the same path as the script,
